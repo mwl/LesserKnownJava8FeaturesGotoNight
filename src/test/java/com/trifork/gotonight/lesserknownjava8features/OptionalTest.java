@@ -11,7 +11,7 @@ public class OptionalTest {
 
     @Test
     public void willGetValueWhenPresent() throws Exception {
-        assertEquals("Hello", Optional.of("Hello").orElseThrow(() -> new RuntimeException("Wasn't present after all")));
+        assertEquals("Hello", Optional.ofNullable("Hello").orElseThrow(() -> new RuntimeException("Wasn't present after all")));
     }
 
     @Test(expected = NoSuchElementException.class)

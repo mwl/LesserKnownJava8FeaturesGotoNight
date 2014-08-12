@@ -22,4 +22,9 @@ public class CollectionsTest {
         assertEquals(10, numbers.parallelStream().mapToInt((s) -> parseInt(s.trim())).sum());
     }
 
+    @Test
+    public void canMapMyModelToStrings() throws Exception {
+        List<MyModel> myModels = asList(new MyModel("a", "b"), new MyModel("c", "d"));
+        assertArrayEquals(new String[]{"a", "c"}, myModels.stream().map(myModel -> myModel.getFirstName()).toArray());
+    }
 }

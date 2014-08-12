@@ -11,6 +11,5 @@ public class LambdaTest {
     @Test
     public void canUseCommonsLang() throws Exception {
         assertEquals("Bar", CollectionUtils.find(asList("Foo", "Bar", "Baz"), s -> s.endsWith("r")));
-
     }
 }
